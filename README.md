@@ -21,7 +21,17 @@ b. Install Driver:
    - Buka terminal di folder download, ketik:
      sudo apt install ./nama_file_driver.deb
 
-3. KONFIGURASI KONEKSI VIA CUPS (LOCALHOST)
+3. INSTALASI SAMBA (CLIENT)
+---------------------------
+a. sudo apt update
+b. sudo apt install smbclient -y
+c. sudo systemctl restart cups
+
+4. CEK NAMA PRINTER DI TERMINAL
+-------------------------------
+a. smbclient -L 192.168.200.21(ini ip client) -U print%print11232(ini contoh user dan password dari server)
+
+5. KONFIGURASI KONEKSI VIA CUPS (LOCALHOST)
 -------------------------------------------
 a. Buka Browser di Ubuntu, akses URL: http://localhost:631
 b. Menu Administration:
@@ -34,15 +44,16 @@ c. Input Connection (Kunci Utama):
      smb://print:password123@192.168.200.21/EPSON%20L3210%20Series%20on%20Asus
    - Klik 'Continue'.
 
-4. PEMILIHAN DRIVER & FINISHING
+6. PEMILIHAN DRIVER & FINISHING
 -------------------------------
 a. Isi Nama & Deskripsi printer (bebas), klik 'Continue'.
 b. Pilih Make: 'Epson', klik 'Continue'.
 c. Pilih Model: 'Epson L3210 Series', klik 'Add Printer'.
 d. Klik 'Set Default Options'.
 
-5. TESTING
+7. TESTING
 ----------
 a. Klik tab 'Printers' di CUPS.
 b. Pilih printer tadi, pilih Maintenance > Print Test Page.
 c. Pastikan status 'Idle, Accepting Jobs'.
+
