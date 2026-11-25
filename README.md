@@ -15,11 +15,11 @@ Cara sharing printer linux sebagai client dan windows sebagai server
 2. INSTALASI DRIVER DI UBUNTU (CLIENT)
 - Download Driver:
    - Buka browser, cari: "Epson L3210 Linux Driver" di situs resmi Epson.
-   - Pilih paket berformat .deb (LST/ESC-P-R).
+   - Pilih paket berformat .deb/.rpm (LST/ESC-P-R).
 - Install Driver:
    - Buka terminal di folder download, ketik:
-     sudo apt install ./nama_file_driver.deb (debian,ubuntu,mint)
-     sudo dnf install ./nama_file_driver.rpm (redhat,fedora)
+    - sudo apt install ./nama_file_driver.deb (debian,ubuntu,mint)
+    - sudo dnf install ./nama_file_driver.rpm (redhat,fedora)
 -----------------------------
 3. INSTALASI SAMBA (CLIENT)
 - sudo apt update
@@ -36,9 +36,9 @@ Cara sharing printer linux sebagai client dan windows sebagai server
    - Pilih 'Windows Printer via SAMBA', klik 'Continue'.
 - Input Connection (Kunci Utama):
    - Masukkan alamat dengan format:
-     smb://[username_windows]:[password_windows]@192.168.200.21/[Share_Name]
+     - smb://[username_windows]:[password_windows]@192.168.200.21/[Share_Name]
    - Contoh dengan spasi (%20):
-     smb://print:password123@192.168.200.21/EPSON%20L3210%20Series%20on%20Asus
+     - smb://print:password123@192.168.200.21/EPSON%20L3210%20Series%20on%20Asus
    - Klik 'Continue'.
 ------------------------------
 6. PEMILIHAN DRIVER & FINISHING
